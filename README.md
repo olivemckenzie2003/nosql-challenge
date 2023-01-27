@@ -110,7 +110,12 @@ The database was queried by making searches for particular records, and updated 
 NoSQL_analysis_starter.ipynb was opened in jupyter notebook and all the details above pertaining to NoSQL_setup_starter.ipynb was repeated.
 In this file the database is interrogate for information and the final resluts output in a Pandas dataframe 
 
+CommandsGitHub.png file shows that files were uploaded to github using gitbash.
 
+git add .               add all files 
 
+git status              check the status the process of what is trying to be accomplished
 
+git commit -m "test"    command is used to save your changes to the local repository with a message
 
+git push                write fikles to git up repository
