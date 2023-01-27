@@ -1,11 +1,13 @@
 # nosql-challenge
 
 
-This challenge mainly makes use of Mongo Database, Jupiter Notebook and Panda dataFrames.
+This challenge mainly makes use of MongoDB Database, Jupiter Notebook and Panda dataFrames.
 
-In github set up a respository called "nosqlchallenge" and clone it to the folder on personal computer where starter files are stored
+In github setup a respository called "nosqlc_hallenge" and clone it to the folder on personal computer where starter files are stored.
 
-Starter files are downloaded on personal computer and extracted inside a folder called "nosqlchallenge". setuo files are as follows: 
+Starter files are downloaded from assignment requirements on https://courses.bootcampspot.com/courses/2522/assignments/42841#submiton to personal computer and extracted inside a folder called "noSQL". 
+
+Downloaded files are as follows: 
 
   NoSQL_setup_starter.ipynb  
 
@@ -14,15 +16,13 @@ Starter files are downloaded on personal computer and extracted inside a folder 
   establishments.json which is stored in a sub folder called Resources
 
 
-After the installation of mongo database on personal computer 
+After the installation of MongoDB Database on personal computer open a gitbash shell in folder "noSQL" where starter code is stored to:
 
-In a gitbash shell in file where starter code is stored
-
- - to start updata mogo database type
+ - start updata mongo database type
 
    mongosh
     
- - to build datbase "uk_food" type
+ - build datbase "uk_food" type
 
    use uk_food
 
@@ -38,17 +38,17 @@ In a gitbash shell in file where starter code is stored
  
    db.createCollection("establishments")
 
- - to show all collections in a database
+ - show all collections in a database
   
    show collections
  
-- In a windows terminal run command 
+In a windows terminal run command 
 
   mongoimport --type json -d uk_food -c establishments --drop --jsonArray establishments.json
   
-  This command allows for the installation of 39779 records to be loaded from json file called "establishments.json" into the table "establishments" which is in the     database uk_food which in turn is in the mongo database. The drop part of the comand allows collections to be dropped if they are already present if the database.
+This command allows for the installation of 39779 records to be loaded from json file called "establishments.json" into the collections/table "establishments" which is in the database "uk_food" which in turn is in the mongo database. The drop part of the comand allows collections to be dropped if they are already present in the database.
   
-  Below is proof of installation which appears in the windows terminal where above command was executed
+Output extract below is proof of installation of 39779 records which appears in the windows terminal where above command was executed
 
 # review the collections in our new database
 #(base)
@@ -71,7 +71,7 @@ Number of records imported was 39779
 
 NoSQL_setup_starter.ipynb was opened in jupyter notebook
 
-These are all the libraries which are necessarty to run the code in file NoSQL_setup_starter.ipynb
+These are all the libraries which are necessary to run the code in file NoSQL_setup_starter.ipynb
 
 # mongoimport --type json -d uk_food -c establishments --drop --jsonArray establishments.json
 # Import dependencies
@@ -84,7 +84,7 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-An instance of the MongoClient was created Which is the tool used to speak to the MongoDatabase using port number 27017
+An instance of the MongoClient was created Which is the tool used to speak to the MongoDB Database using port number 27017
 Code
 mongo = MongoClient(port=27017)
 
@@ -104,11 +104,11 @@ print(db.list_collection_names())
 
 Output ['establishments']
 
-The database was queried by making searches for particular records,and updated by adding and deleting records, and making changes to records.
+The database was queried by making searches for particular records, and updated by adding and deleting records, and making changes to records.
 
 
 NoSQL_analysis_starter.ipynb was opened in jupyter notebook and all the details above pertaining to NoSQL_setup_starter.ipynb was repeated.
-In this file the database is interigated for information and the final resluts output in a Pandas dataframe 
+In this file the database is interrogate for information and the final resluts output in a Pandas dataframe 
 
 
 
